@@ -5,20 +5,10 @@ sandeepv68@gmail.com
 //Gulp Configuration
 'use strict';
 //require gulp module
-var gulp = require('gulp');
-//require browser-sync module
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+var gulp   = require('gulp');
+
 //set gulp task - default
-gulp.task('default', ['browser-sync'], function() {});
-//set gulp task - browser-sync static server
-gulp.task('browser-sync', ['generate-service-worker'], function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
-    }
-  });
-});
+gulp.task('default', ['generate-service-worker'], function() {});
 
 //set gulp task generate-service-worker
 gulp.task('generate-service-worker', function(callback) {
