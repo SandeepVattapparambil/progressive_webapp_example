@@ -11,8 +11,6 @@
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="theme-color" content="#c0ca33">
-
   <link rel="icon" href="images/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
@@ -30,7 +28,6 @@
 
   <link rel="manifest" href="manifest.json">
 
-  <meta name="msapplication-TileColor" content="#c0ca33">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
 </head>
@@ -59,7 +56,7 @@
       <i class="large material-icons">menu</i>
     </a>
     <ul>
-      <li class="waves-effect waves-light white-text">Click on the <i class="material-icons small">more_vert</i> and add to homescreen.</li>
+      <li class="waves-effect waves-light white-text">Click on the <i class="material-icons">more_vert</i> and add to homescreen.</li>
     </ul>
   </div>
 
@@ -77,11 +74,15 @@
     if (navigator.onLine) {
       // do things that need connection
       Materialize.toast('I am Online!', 4000);
+      $('head').append('<meta name="theme-color" content="#c0ca33">');
+      $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
       $('#card').addClass('lime');
       console.log("Online");
     } else {
       // do things that don't need connection
       Materialize.toast('I am Offline!', 4000);
+      $('head').append('<meta name="theme-color" content="#607d8b">');
+      $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
       $('#card').addClass('blue-grey');
       console.log("offline");
     }
