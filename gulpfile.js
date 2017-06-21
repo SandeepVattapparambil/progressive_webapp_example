@@ -5,10 +5,15 @@ sandeepv68@gmail.com
 //Gulp Configuration
 'use strict';
 //require gulp module
-var gulp   = require('gulp');
+var gulp = require('gulp');
+var connect = require('gulp-connect');
 
-//set gulp task - default
-gulp.task('default', ['generate-service-worker'], function() {});
+//set webserver
+gulp.task('webserver', function() {
+  connect.server({
+    livereload: true
+  });
+});
 
 //set gulp task generate-service-worker
 gulp.task('generate-service-worker', function(callback) {
@@ -24,3 +29,17 @@ gulp.task('generate-service-worker', function(callback) {
     ]
   }, callback);
 });
+
+//watcher
+gulp.task('watch', function() {
+  gulp.watch([
+    '*.html',
+    'css/**.css',
+    'js/**.js',
+    'images/**.*',
+    'fonts/**/**.*'
+  ], ['generate-service-worker']);
+});
+
+//set gulp task - default
+gulp.task('default', ['webserver', 'watch','generate-service-worker'], function() {});

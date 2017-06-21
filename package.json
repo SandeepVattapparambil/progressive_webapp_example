@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",
+    "gulp-connect": "^5.0.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-server-livereload": "^1.9.2",
     "gulp-webserver": "^0.9.1"
