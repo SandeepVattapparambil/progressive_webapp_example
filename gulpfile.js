@@ -42,4 +42,4 @@ gulp.task('watch', function() {
 });
 
 //set gulp task - default
-gulp.task('default', ['webserver', 'watch','generate-service-worker'], function() {});
+gulp.task('default', ['generate-service-worker', 'webserver', 'watch'], function() {});
