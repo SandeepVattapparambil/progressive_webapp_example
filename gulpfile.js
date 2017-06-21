@@ -12,7 +12,8 @@ gulp.task('generate-service-worker', function(callback) {
       '**.**',
       'css/**.css',
       'js/**.js',
-      'fonts/**/**.*'
+      'fonts/**/**.*',
+      'images/**.*'
     ]
   }, callback);
 });
