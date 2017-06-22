@@ -68,25 +68,21 @@
     </div>
     <div class="row">
       <div class="col s12 m8 l10 offset-l1">
-        <div id="card_1" class="card darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">About Me</span>
-            <p>My name is Sandeep Vattapparambil. I am from Nilambur, Kerala. I graduated in Computer Science & Engineering from KMCT College of Engineering under University of Calicut. </p>
-          </div>
-          <div class="card-content white-text">
-            <p>This is a simple demo of a PWA</p>
+        <div id="card_1" class="card">
+          <div class="card-content grey-text">
+            <span class="card-title"><i class="mdi mdi-account-circle"></i> About Me</span>
+            <p>My name is Sandeep Vattapparambil. I am from Nilambur, Kerala. I graduated in Computer Science & Engineering from KMCT College of Engineering under University of Calicut. Passionate in modern computing technologies and developing software
+              for the web.
+            </p>
           </div>
         </div>
       </div>
       <div class="col s12 m8 l10 offset-l1">
         <div id="card_2" class="card darken-1">
-          <div class="card-content white-text">
+          <div class="card-content grey-text">
             <span class="card-title">Progressive Web App</span>
             <p>A Progressive Web App (PWA) is a web app that uses modern web capabilities to deliver an app-like experience to users. ... You can deploy your app as a PWA as well as Native app and take advantage of both channels. Ionic allows you to ship
               your app to not only the app store, but also deploy to the mobile web as a PWA</p>
-          </div>
-          <div class="card-content white-text">
-            <p>This is a simple demo of a PWA</p>
           </div>
         </div>
       </div>
@@ -120,7 +116,6 @@
       $('head').append('<meta name="theme-color" content="#c0ca33">');
       $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
       $('#navbar_id').addClass('lime');
-      $('.card').addClass('lime');
       console.log("Online");
     } else {
       // do things that don't need connection
@@ -128,7 +123,6 @@
       $('head').append('<meta name="theme-color" content="#607d8b">');
       $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
       $('#navbar_id').addClass('blue-grey');
-      $('.card').addClass('blue-grey');
       console.log("offline");
     }
   </script>
