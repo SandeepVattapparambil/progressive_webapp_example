@@ -9,6 +9,10 @@ nav {
   font-family: 'Pacifico', cursive;
 }
 
-h3{
+.title{
   font-style: normal;
+}
+
+.subtitle{
+  font-size: 20px;
 }

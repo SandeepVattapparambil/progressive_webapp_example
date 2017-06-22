@@ -62,14 +62,24 @@
     <!-- Page Content goes here -->
     <div class="container center">
       <br>
-      <img class="circle" height="100" width="100" src="images/ms-icon-310x310.png">
-      <h3>Hello, I am Sandeep Vattapparambil.,</h3>
-      <p>
-        I am a Full Stack Web Developer & a Computer Engineer!</p>
+      <img class="circle z-depth-3" height="100" width="100" src="images/ms-icon-310x310.png">
+      <h3 class="title lime-text text-darken-3">Hello, I am Sandeep V.,</h3>
+      <p class="subtitle grey-text text-darken-1">I am a Full Stack Web Developer & a Computer Engineer!</p>
     </div>
     <div class="row">
       <div class="col s12 m8 l10 offset-l1">
-        <div id="card" class="card darken-1">
+        <div id="card_1" class="card darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">About Me</span>
+            <p>My name is Sandeep Vattapparambil. I am from Nilambur, Kerala. I graduated in Computer Science & Engineering from KMCT College of Engineering under University of Calicut. </p>
+          </div>
+          <div class="card-content white-text">
+            <p>This is a simple demo of a PWA</p>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m8 l10 offset-l1">
+        <div id="card_2" class="card darken-1">
           <div class="card-content white-text">
             <span class="card-title">Progressive Web App</span>
             <p>A Progressive Web App (PWA) is a web app that uses modern web capabilities to deliver an app-like experience to users. ... You can deploy your app as a PWA as well as Native app and take advantage of both channels. Ionic allows you to ship
@@ -110,7 +120,7 @@
       $('head').append('<meta name="theme-color" content="#c0ca33">');
       $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
       $('#navbar_id').addClass('lime');
-      $('#card').addClass('lime');
+      $('.card').addClass('lime');
       console.log("Online");
     } else {
       // do things that don't need connection
@@ -118,7 +128,7 @@
       $('head').append('<meta name="theme-color" content="#607d8b">');
       $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
       $('#navbar_id').addClass('blue-grey');
-      $('#card').addClass('blue-grey');
+      $('.card').addClass('blue-grey');
       console.log("offline");
     }
   </script>
