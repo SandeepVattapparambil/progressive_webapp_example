@@ -24,6 +24,7 @@ gulp.task('generate-service-worker', function(callback) {
       '**.**',
       'css/**.css',
       'js/**.js',
+      'fonts/**.*',
       'fonts/**/**.*',
       'images/**.*'
     ]
@@ -37,6 +38,7 @@ gulp.task('watch', function() {
     'css/**.css',
     'js/**.js',
     'images/**.*',
+    'fonts/**.*',
     'fonts/**/**.*'
   ], ['generate-service-worker']);
 });
