@@ -37,3 +37,13 @@ body > div.fixed-action-btn.toolbar.active > ul > li > i{
 .italics{
   font-style: italic;
 }
+
+@font-face {
+    font-family: meera;
+    src: url('../fonts/meera.ttf');
+}
+
+.meera {
+    font-family: meera;
+    font-size: 18px;
+}
