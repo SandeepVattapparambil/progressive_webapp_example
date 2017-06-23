@@ -298,7 +298,7 @@
                     <label for="message">Message</label>
                   </div>
                 </div>
-                <button type="submit" class="waves-effect btn-flat lime white-text right"><i class="mdi mdi-send left"></i>Send</button>
+                <button type="submit" id="form_button" class="waves-effect btn-flat lime white-text right disabled"><i class="mdi mdi-send left"></i>Send</button>
               </form>
             </div>
             <div id="chip_message" class="chip amber hide">
@@ -355,6 +355,9 @@
       $('html, body').animate({
         scrollTop: $("#card_6").offset().top
       }, 2000);
+    });
+    $('#contact').on('keyup change', 'input, textarea', function() {
+      $('#form_button').removeClass('disabled');
     });
     var scroll_fire_options = [{
       selector: '#map',
