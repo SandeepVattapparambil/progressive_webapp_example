@@ -300,6 +300,7 @@
       Materialize.toast('<span class="lime-text">I am Online!</span>', 4000);
       $('head').append('<meta name="theme-color" content="#c0ca33">');
       $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
+      $('body').addClass('lime lighten-4');
       $('#navbar_id').addClass('lime');
       console.log("Online");
     } else {
@@ -307,6 +308,7 @@
       Materialize.toast('<span class="red-text">I am Offline!</span>', 4000);
       $('head').append('<meta name="theme-color" content="#607d8b">');
       $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
+      $('body').addClass('grey lighten-4');
       $('#navbar_id').addClass('blue-grey');
       console.log("offline");
     }
