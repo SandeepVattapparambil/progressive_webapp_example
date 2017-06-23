@@ -64,10 +64,11 @@ var frm = $('#contact');
 frm.submit(function(e) {
   e.preventDefault();
   var form_data = {
-    name: $('name').val(),
-    email: $('email').val(),
-    message: $('message').val(),
+    name: $('#username').val(),
+    email: $('#useremail').val(),
+    message: $('#usermessage').val(),
   }
+  console.log(form_data);
   $.ajax({
     type: "post",
     url: "process/mail.php",

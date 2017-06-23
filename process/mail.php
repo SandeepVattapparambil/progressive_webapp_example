@@ -10,6 +10,10 @@ $headers = 'From: webmaster@pwa-example-sandeep.herokuapp.com' . "\r\n" .
     'Reply-To: no-reply@pwa-example-sandeep.herokuapp.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-mail($to, $subject, $message, $headers);
-return;
+if(mail($to, $subject, $message, $headers)){
+  return 'success';
+}
+else{
+  return 'fail';
+}
 ?>
