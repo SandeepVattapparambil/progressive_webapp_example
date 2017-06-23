@@ -67,7 +67,7 @@
       <img class="circle z-depth-3" height="100" width="100" src="images/ms-icon-310x310.png">
       <h3 class="title lime-text text-darken-3">Hello, I am Sandeep V.,</h3>
       <p class="subtitle grey-text text-darken-1">Full Stack Web Developer & a Computer Engineer!</p>
-      <p><a class="waves-effect waves-light btn-large lime">Hire Me!</a></p>
+      <p><a id="hire_me" class="waves-effect waves-light btn-large lime">Hire Me!</a></p>
     </div>
     <div class="row">
       <div class="col s12 m8 l10 offset-l1">
@@ -90,7 +90,7 @@
         </div>
       </div>
       <div class="col s12 m8 l10 offset-l1">
-        <div id="card_2" class="card hoverable">
+        <div id="card_3" class="card hoverable">
           <div class="card-content grey-text">
             <span class="card-title lime-text"><i class="mdi mdi-worker"></i> What I have been doing ?</span>
             <p><strong>Co-Founder and Chief Technology Officer at CodeLarvae Technologies: 2014-2015.</strong><br> Research Project Incubated at Technology Business Incubator, National Institute of Technology - Calicut, NIT Campus, Calicut, Kozhikode, INDIA.
@@ -102,7 +102,7 @@
         </div>
       </div>
       <div class="col s12 m8 l10 offset-l1">
-        <div id="card_2" class="card hoverable">
+        <div id="card_4" class="card hoverable">
           <div class="card-content grey-text">
             <span class="card-title lime-text"><i class="mdi mdi-trophy"></i> What are my Skills ?</span>
             <ul class="collapsible" data-collapsible="expandable">
@@ -263,7 +263,7 @@
         </div>
       </div>
       <div class="col s12 m8 l10 offset-l1">
-        <div id="card_2" class="card hoverable">
+        <div id="card_5" class="card hoverable">
           <div class="card-content grey-text">
             <span class="card-title lime-text"><i class="material-icons">map</i> Reach me here !</span>
             <p><strong>Address:</strong> Sandeep Vattapparambil, Sandram House, Rose Nagar, Veettikkuthu, Nilambur, Malappuram, Kerala, INDIA, 679329</p>
@@ -276,7 +276,7 @@
         </div>
       </div>
       <div class="col s12 m8 l10 offset-l1">
-        <div id="card_2" class="card hoverable">
+        <div id="card_6" class="card hoverable">
           <div class="card-content grey-text">
             <span class="card-title lime-text"><i class="mdi mdi-email"></i> Mail me!</span>
             <div id="mail_form" class="row">
@@ -351,6 +351,11 @@
   <script>
     $(".button-collapse").sideNav();
     $('.collapsible').collapsible();
+    $("#hire_me").click(function() {
+      $('html, body').animate({
+        scrollTop: $("#card_6").offset().top
+      }, 2000);
+    });
     var scroll_fire_options = [{
       selector: '#map',
       offset: 50,
