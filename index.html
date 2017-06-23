@@ -277,9 +277,29 @@
       <div class="col s12 m8 l10 offset-l1">
         <div id="card_2" class="card hoverable">
           <div class="card-content grey-text">
-            <span class="card-title"> Web App</span>
-            <p>A Progressive Web App (PWA) is a web app that uses modern web capabilities to deliver an app-like experience to users. ... You can deploy your app as a PWA as well as Native app and take advantage of both channels. Ionic allows you to ship
-              your app to not only the app store, but also deploy to the mobile web as a PWA</p>
+            <span class="card-title lime-text"><i class="mdi mdi-email"></i> Mail me!</span>
+            <div class="row">
+              <form class="col s12" id="contact" name="contact">
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input id="icon_prefix" type="text" class="validate" name="name">
+                    <label for="icon_prefix">Name</label>
+                  </div>
+                  <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">email</i>
+                    <input id="icon_mail" type="tel" class="validate" name="email">
+                    <label for="icon_mail">Email</label>
+                  </div>
+                  <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="message" class="materialize-textarea" name="message"></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+                <a class="waves-effect btn-flat lime white-text right"><i class="mdi mdi-send left"></i>Send</a>
+              </form>
+            </div>
           </div>
         </div>
       </div>
