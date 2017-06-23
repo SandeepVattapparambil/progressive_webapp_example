@@ -67,6 +67,7 @@
       <img class="circle z-depth-3" height="100" width="100" src="images/ms-icon-310x310.png">
       <h3 class="title lime-text text-darken-3">Hello, I am Sandeep V.,</h3>
       <p class="subtitle grey-text text-darken-1">Full Stack Web Developer & a Computer Engineer!</p>
+      <p><a class="waves-effect waves-light btn-large lime">Hire Me!</a></p>
     </div>
     <div class="row">
       <div class="col s12 m8 l10 offset-l1">
@@ -278,7 +279,7 @@
         <div id="card_2" class="card hoverable">
           <div class="card-content grey-text">
             <span class="card-title lime-text"><i class="mdi mdi-email"></i> Mail me!</span>
-            <div class="row">
+            <div id="mail_form" class="row">
               <form class="col s12" id="contact" name="contact">
                 <div class="row">
                   <div class="input-field col s12 m6">
@@ -299,6 +300,9 @@
                 </div>
                 <a class="waves-effect btn-flat lime white-text right"><i class="mdi mdi-send left"></i>Send</a>
               </form>
+            </div>
+            <div id="chip_message" class="chip amber hide">
+              You can mail me when you are online :)
             </div>
           </div>
         </div>
@@ -326,11 +330,11 @@
     </ul>
   </div>
 
-  <footer class="page-footer lime">
+  <footer id="foot" class="page-footer">
     <div class="footer-copyright">
       <div class="container">
         © 2017 Copyright Sandeep V
-        <a class="grey-text text-lighten-4 right">Made with ❤️</a>
+        <a class="grey-text text-lighten-4 right">Made with ❤️ </a>
       </div>
     </div>
   </footer>
@@ -360,7 +364,7 @@
       $('head').append('<meta name="theme-color" content="#c0ca33">');
       $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
       $('body').addClass('lime lighten-4');
-      $('#navbar_id').addClass('lime');
+      $('#navbar_id, #foot').addClass('lime');
       console.log("Online");
     } else {
       // do things that don't need connection
@@ -368,7 +372,9 @@
       $('head').append('<meta name="theme-color" content="#607d8b">');
       $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
       $('body').addClass('grey lighten-4');
-      $('#navbar_id').addClass('blue-grey');
+      $('#mail_form').hide();
+      $('#chip_message').removeClass('hide');
+      $('#navbar_id, #foot').addClass('blue-grey');
       Materialize.scrollFire(scroll_fire_options);
       console.log("offline");
     }
