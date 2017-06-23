@@ -9,10 +9,14 @@ nav {
   font-family: 'Pacifico', cursive;
 }
 
-.title{
+.title {
   font-style: normal;
 }
 
-.subtitle{
+.subtitle {
   font-size: 20px;
+}
+
+#sidenav-overlay {
+  z-index: 996;
 }
