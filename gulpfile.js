@@ -22,7 +22,7 @@ gulp.task('generate-service-worker', function(callback) {
   swPrecache.write(path.join('sw.js'), {
     staticFileGlobs: [
       '**.**',
-      'css/**.css',
+      'css/**.*',
       'js/**.js',
       'fonts/**.*',
       'fonts/**/**.*',
