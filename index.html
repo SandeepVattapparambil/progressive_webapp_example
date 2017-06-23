@@ -264,6 +264,19 @@
       <div class="col s12 m8 l10 offset-l1">
         <div id="card_2" class="card hoverable">
           <div class="card-content grey-text">
+            <span class="card-title lime-text"><i class="material-icons">map</i> Reach me here !</span>
+            <p><strong>Address:</strong> Sandeep Vattapparambil, Sandram House, Rose Nagar, Veettikkuthu, Nilambur, Malappuram, Kerala, INDIA, 679329</p>
+            <p><strong>Phone:</strong> +91 7293289047</p>
+            <p><strong>Email:</strong> sandeepv68@gmail.com</p>
+          </div>
+          <div id="map" class="card-content">
+
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m8 l10 offset-l1">
+        <div id="card_2" class="card hoverable">
+          <div class="card-content grey-text">
             <span class="card-title"> Web App</span>
             <p>A Progressive Web App (PWA) is a web app that uses modern web capabilities to deliver an app-like experience to users. ... You can deploy your app as a PWA as well as Native app and take advantage of both channels. Ionic allows you to ship
               your app to not only the app store, but also deploy to the mobile web as a PWA</p>
@@ -313,6 +326,22 @@
       console.log("offline");
     }
   </script>
+  <script>
+      function initMap() {
+        var uluru = {lat: 11.272289, lng: 76.227919};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfgWs5vDckBdTieM0GCSECln2U-H5sALA&callback=initMap">
+    </script>
 </body>
 
 </html>
