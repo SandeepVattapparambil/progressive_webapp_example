@@ -35,7 +35,7 @@ gulp.task('generate-service-worker', function(callback) {
 gulp.task('watch', function() {
   gulp.watch([
     '*.html',
-    'css/**.css',
+    'css/**.*',
     'js/**.js',
     'images/**.*',
     'fonts/**.*',
