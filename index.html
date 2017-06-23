@@ -298,7 +298,7 @@
                     <label for="message">Message</label>
                   </div>
                 </div>
-                <a class="waves-effect btn-flat lime white-text right"><i class="mdi mdi-send left"></i>Send</a>
+                <button type="submit" class="waves-effect btn-flat lime white-text right"><i class="mdi mdi-send left"></i>Send</button>
               </form>
             </div>
             <div id="chip_message" class="chip amber hide">
@@ -326,7 +326,7 @@
       <i class="large material-icons">menu</i>
     </a>
     <ul>
-      <li class="waves-effect waves-light white-text">Click on the <i class="material-icons">more_vert</i> and add to homescreen.</li>
+      <li id="pulse_menu" class="waves-effect waves-light white-text">Click on the <i class="material-icons">more_vert</i> and add to homescreen.</li>
     </ul>
   </div>
 
@@ -383,6 +383,27 @@
       Materialize.scrollFire(scroll_fire_options);
       console.log("offline");
     }
+
+    var frm = $('#contact');
+
+    frm.submit(function(e) {
+
+      e.preventDefault();
+
+      $.ajax({
+        type: "POST",
+        url: "process/mail.php",
+        data: frm.serialize(),
+        success: function(data) {
+          console.log('Submission was successful.');
+          console.log(data);
+        },
+        error: function(data) {
+          console.log('An error occurred.');
+          console.log(data);
+        },
+      });
+    });
   </script>
   <script>
     function initMap() {

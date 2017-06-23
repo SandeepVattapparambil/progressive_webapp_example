@@ -24,3 +24,8 @@ nav {
 #map{
   min-height: 380px;
 }
+
+body > div.fixed-action-btn.toolbar.active > ul > li > i{
+  line-height: 2;
+  font-size: 20px;
+}
