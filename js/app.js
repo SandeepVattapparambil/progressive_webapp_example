@@ -1,7 +1,7 @@
 /*
-*Sandeep Vattapparambil
-*sandeepv68@gmail.com
-*/
+ *Sandeep Vattapparambil
+ *sandeepv68@gmail.com
+ */
 //Service worker promise
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').then(function() {
@@ -74,12 +74,16 @@ frm.submit(function(e) {
     url: "process/mail.php",
     data: form_data,
     success: function(data) {
-      console.log('Submission was successful.');
-      Materialize.toast('<span class="lime-text"><strong>Message Sent!</strong></span>', 4000);
+      if (data === 'success') {
+        console.log('Submission was successful.');
+        Materialize.toast('<span class="lime-text"><strong>Message Sent!</strong></span>', 4000);
+      } else {
+        console.log('An error occurred.');
+        Materialize.toast('<span class="red-text"><strong>OOps! Internal Server Error:(</strong></span>', 4000);
+      }
     },
     error: function(data) {
-      console.log('An error occurred.');
-      Materialize.toast('<span class="red-text"><strong>OOps! Internal Server Error:(</strong></span>', 4000);
+
     },
   });
 });

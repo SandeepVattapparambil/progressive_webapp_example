@@ -33,3 +33,7 @@ body > div.fixed-action-btn.toolbar.active > ul > li > i{
 #form_button, #form_clear_button{
   margin: 5px;
 }
+
+.italics{
+  font-style: italic;
+}
