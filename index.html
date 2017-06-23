@@ -396,11 +396,11 @@
         data: frm.serialize(),
         success: function(data) {
           console.log('Submission was successful.');
-          console.log(data);
+          Materialize.toast('<span class="lime-text">Message Sent!</span>', 4000);
         },
         error: function(data) {
           console.log('An error occurred.');
-          console.log(data);
+          Materialize.toast('<span class="red-text">OOps! Internal Server Error:(</span>', 4000);
         },
       });
     });
