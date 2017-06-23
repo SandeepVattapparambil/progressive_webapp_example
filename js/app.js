@@ -75,11 +75,11 @@ frm.submit(function(e) {
     data: form_data,
     success: function(data) {
       console.log('Submission was successful.');
-      Materialize.toast('<span class="lime-text">Message Sent!</span>', 4000);
+      Materialize.toast('<span class="lime-text"><strong>Message Sent!</strong></span>', 4000);
     },
     error: function(data) {
       console.log('An error occurred.');
-      Materialize.toast('<span class="red-text">OOps! Internal Server Error:(</span>', 4000);
+      Materialize.toast('<span class="red-text"><strong>OOps! Internal Server Error:(</strong></span>', 4000);
     },
   });
 });
