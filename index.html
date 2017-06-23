@@ -66,7 +66,7 @@
       <br>
       <img id="logo_img" class="circle z-depth-3" height="100" width="100">
       <h3 class="title lime-text text-darken-3">Hello, I am Sandeep V.,</h3>
-      <p class="subtitle grey-text text-darken-1">Full Stack Web Developer & a Computer Engineer!</p>
+      <p class="subtitle grey-text text-darken-1">Full Stack Web Developer & Computer Engineer!</p>
       <p><a id="hire_me" class="waves-effect waves-light btn-large lime">Hire Me!</a></p>
     </div>
     <div class="row">
@@ -284,21 +284,22 @@
                 <div class="row">
                   <div class="input-field col s12 m6">
                     <i class="material-icons prefix">account_circle</i>
-                    <input id="icon_prefix" type="text" class="validate" name="name">
+                    <input id="icon_prefix" type="text" class="validate" name="name" required>
                     <label for="icon_prefix">Name</label>
                   </div>
                   <div class="input-field col s12 m6">
                     <i class="material-icons prefix">email</i>
-                    <input id="icon_mail" type="tel" class="validate" name="email">
+                    <input id="icon_mail" type="email" class="validate" name="email" required>
                     <label for="icon_mail">Email</label>
                   </div>
                   <div class="input-field col s12">
                     <i class="material-icons prefix">mode_edit</i>
-                    <textarea id="message" class="materialize-textarea" name="message"></textarea>
+                    <textarea id="message" class="materialize-textarea" name="message" required></textarea>
                     <label for="message">Message</label>
                   </div>
                 </div>
                 <button type="submit" id="form_button" class="waves-effect btn-flat lime white-text right disabled"><i class="mdi mdi-send left"></i>Send</button>
+                <button type="reset" id="form_clear_button" class="waves-effect btn-flat lime white-text right disabled"><i class="mdi mdi-delete left"></i>Clear</button>
               </form>
             </div>
             <div id="chip_message" class="chip amber hide">

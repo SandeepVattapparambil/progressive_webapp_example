@@ -23,7 +23,7 @@ $("#hire_me").click(function() {
 
 //Contact form submit button class ctrl
 $('#contact').on('keyup change', 'input, textarea', function() {
-  $('#form_button').removeClass('disabled');
+  $('#form_button, #form_clear_button').removeClass('disabled');
 });
 
 //Map online/offline notofication
@@ -47,7 +47,7 @@ if (navigator.onLine) {
   console.log("Online");
 } else {
   // do things that don't need connection
-  Materialize.toast('<span class="red-text">Oops!</span>', 4000);
+  Materialize.toast('<span class="red-text"><strong>Oops! you are offline :(</strong></span>', 4000);
   $('head').append('<meta name="theme-color" content="#607d8b">');
   $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
   $("#logo_img").attr("src", "images/greylogo.png");
@@ -63,10 +63,15 @@ if (navigator.onLine) {
 var frm = $('#contact');
 frm.submit(function(e) {
   e.preventDefault();
+  var form_data = {
+    name: $('name').val(),
+    email: $('email').val(),
+    message: $('message').val(),
+  }
   $.ajax({
     type: "post",
     url: "process/mail.php",
-    data: frm.serialize(),
+    data: form_data,
     success: function(data) {
       console.log('Submission was successful.');
       Materialize.toast('<span class="lime-text">Message Sent!</span>', 4000);
