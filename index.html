@@ -308,6 +308,13 @@
   <script>
     $(".button-collapse").sideNav();
     $('.collapsible').collapsible();
+    var scroll_fire_options = [{
+      selector: '#map',
+      offset: 50,
+      callback: function(el) {
+        Materialize.toast('<span class="amber-text">Map available when online!</span>', 1500);
+      }
+    }];
     if (navigator.onLine) {
       // do things that need connection
       Materialize.toast('<span class="lime-text">I am Online!</span>', 4000);
@@ -323,25 +330,28 @@
       $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
       $('body').addClass('grey lighten-4');
       $('#navbar_id').addClass('blue-grey');
+      Materialize.scrollFire(scroll_fire_options);
       console.log("offline");
     }
   </script>
   <script>
-      function initMap() {
-        var uluru = {lat: 11.272289, lng: 76.227919};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfgWs5vDckBdTieM0GCSECln2U-H5sALA&callback=initMap">
-    </script>
+    function initMap() {
+      var uluru = {
+        lat: 11.272289,
+        lng: 76.227919
+      };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfgWs5vDckBdTieM0GCSECln2U-H5sALA&callback=initMap">
+  </script>
 </body>
 
 </html>
