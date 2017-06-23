@@ -337,7 +337,7 @@
     </div>
   </footer>
   <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/materialize.js"></script>
   <script>
     if ('serviceWorker' in navigator) {
@@ -361,12 +361,12 @@
       selector: '#map',
       offset: 50,
       callback: function(el) {
-        Materialize.toast('<span class="amber-text">Map available when online!</span>', 1500);
+        Materialize.toast('<span class="amber-text"><strong>Map available when online!</strong></span>', 1500);
       }
     }];
     if (navigator.onLine) {
       // do things that need connection
-      Materialize.toast('<span class="lime-text">I am Online!</span>', 4000);
+      Materialize.toast('<span class="lime-text"><strong>Hello there :)</strong></span>', 4000);
       $('head').append('<meta name="theme-color" content="#c0ca33">');
       $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
       $("#logo_img").attr("src","images/ms-icon-310x310.png");
@@ -375,7 +375,7 @@
       console.log("Online");
     } else {
       // do things that don't need connection
-      Materialize.toast('<span class="red-text">I am Offline!</span>', 4000);
+      Materialize.toast('<span class="red-text">Oops!</span>', 4000);
       $('head').append('<meta name="theme-color" content="#607d8b">');
       $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
       $("#logo_img").attr("src","images/greylogo.png");
