@@ -64,7 +64,7 @@
     <!-- Page Content goes here -->
     <div class="container center">
       <br>
-      <img class="circle z-depth-3" height="100" width="100" src="images/ms-icon-310x310.png">
+      <img id="logo_img" class="circle z-depth-3" height="100" width="100">
       <h3 class="title lime-text text-darken-3">Hello, I am Sandeep V.,</h3>
       <p class="subtitle grey-text text-darken-1">Full Stack Web Developer & a Computer Engineer!</p>
       <p><a id="hire_me" class="waves-effect waves-light btn-large lime">Hire Me!</a></p>
@@ -369,6 +369,7 @@
       Materialize.toast('<span class="lime-text">I am Online!</span>', 4000);
       $('head').append('<meta name="theme-color" content="#c0ca33">');
       $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
+      $("#logo_img").attr("src","images/ms-icon-310x310.png");
       $('body').addClass('lime lighten-4');
       $('#navbar_id, #foot').addClass('lime');
       console.log("Online");
@@ -377,6 +378,7 @@
       Materialize.toast('<span class="red-text">I am Offline!</span>', 4000);
       $('head').append('<meta name="theme-color" content="#607d8b">');
       $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
+      $("#logo_img").attr("src","images/greylogo.png");
       $('body').addClass('grey lighten-4');
       $('#mail_form').hide();
       $('#chip_message').removeClass('hide');
