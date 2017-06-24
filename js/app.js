@@ -55,6 +55,7 @@ if (navigator.onLine) {
   $('.divider').addClass('lime darken-2');
   $('#side-nav-propic').attr('src', 'images/ms-icon-144x144.png');
   $('#navbar_id, #foot').addClass('lime');
+  $( "#pwa_info" ).slideDown(800).delay(3000).fadeIn(800);
   console.log("Online");
 } else {
   // do things that don't need connection
@@ -73,6 +74,11 @@ if (navigator.onLine) {
   console.log("offline");
 }
 
+//pwa_info destroy
+$('#close_btn').click(function(){
+  $('#pwa_info').addClass('animated zoomOut');
+  $('#pwa_info').remove();
+})
 //Contact form ajax ctrl
 var frm = $('#contact');
 frm.submit(function(e) {
