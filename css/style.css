@@ -21,49 +21,55 @@ nav {
   z-index: 996;
 }
 
-#map{
+#map {
   min-height: 380px;
 }
 
-body > div.fixed-action-btn.toolbar.active > ul > li > i{
+body>div.fixed-action-btn.toolbar.active>ul>li>i {
   line-height: 2;
   font-size: 20px;
 }
 
-#form_button, #form_clear_button{
+#form_button, #form_clear_button {
   margin: 5px;
 }
 
-.italics{
+.italics {
   font-style: italic;
 }
 
 @font-face {
-    font-family: meera;
-    src: url('../fonts/meera.ttf');
+  font-family: meera;
+  src: url('../fonts/meera.ttf');
 }
 
 .meera {
-    font-family: meera;
-    font-size: 18px;
+  font-family: meera;
+  font-size: 18px;
 }
 
-.inline_flex{
+.inline_flex {
   display: inline-flex;
 }
 
-.name{
+.name {
   font-size: 24px;
 }
-.email{
+
+.email {
   font-size: 18px;
   font-weight: 100;
 }
-#side-nav-propic{
+
+#side-nav-propic {
   margin-top: 10px;
   margin-bottom: -10px;
 }
 
-.margined{
+.margined {
   margin-bottom: -15px;
+}
+
+.gradient {
+  background: #cddc39;
 }
