@@ -13,7 +13,9 @@ if ('serviceWorker' in navigator) {
 //Materializecss initializations
 $(".button-collapse").sideNav();
 $('.collapsible').collapsible();
-$('.tooltipped').tooltip({delay: 50});
+$('.tooltipped').tooltip({
+  delay: 50
+});
 
 //Main hire me button scroll down
 $("#goto_top").click(function() {
@@ -55,7 +57,7 @@ if (navigator.onLine) {
   $('.divider').addClass('lime darken-2');
   $('#side-nav-propic').attr('src', 'images/ms-icon-144x144.png');
   $('#navbar_id, #foot').addClass('lime');
-  $( "#pwa_info" ).slideDown(800).delay(3000).fadeIn(800);
+  $("#pwa_info").delay(4000).fadeIn(800);
   console.log("Online");
 } else {
   // do things that don't need connection
@@ -75,9 +77,9 @@ if (navigator.onLine) {
 }
 
 //pwa_info destroy
-$('#close_btn').click(function(){
+$('#close_btn').click(function() {
   $('#pwa_info').addClass('animated zoomOut');
-  $('#pwa_info').remove();
+  $("#pwa_info").fadeOut(1000);
 })
 //Contact form ajax ctrl
 var frm = $('#contact');
