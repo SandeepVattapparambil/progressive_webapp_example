@@ -47,3 +47,7 @@ body > div.fixed-action-btn.toolbar.active > ul > li > i{
     font-family: meera;
     font-size: 18px;
 }
+
+.inline_flex{
+  display: inline-flex;
+}
