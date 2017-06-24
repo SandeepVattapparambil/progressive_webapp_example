@@ -51,3 +51,19 @@ body > div.fixed-action-btn.toolbar.active > ul > li > i{
 .inline_flex{
   display: inline-flex;
 }
+
+.name{
+  font-size: 24px;
+}
+.email{
+  font-size: 18px;
+  font-weight: 100;
+}
+#side-nav-propic{
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.margined{
+  margin-bottom: -15px;
+}
