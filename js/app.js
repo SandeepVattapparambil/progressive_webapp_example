@@ -111,11 +111,18 @@ $(document).ready(function() {
     return (navigator.cookieEnabled);
   }
   var cookie_check = hasCookies();
-  if(cookie_check){
+  if (cookie_check) {
     console.log('Cookie enabled!');
-  }
-  else{
+  } else {
     Materialize.toast('<span class="red-text"><strong>Please enable cookies!</strong></span>', 4000);
+  }
+  if (Cookies.get('init')) {
+    console.log('read a cookie');
+  } else {
+    Materialize.toast('<span class="amber-text-text"><strong>I use Cookie to perform better :)</strong></span>', 4000);
+    Cookies.set('init', 'true', {
+      expires: 7
+    });
   }
   /*
   //Create a cookie, valid across the entire site:
