@@ -51,6 +51,9 @@ if (navigator.onLine) {
   $('head').append('<meta name="msapplication-TileColor" content="#c0ca33">');
   $("#logo_img").attr("src", "images/ms-icon-310x310.png");
   $('body').addClass('lime lighten-4');
+  $('#mobile-demo').addClass('lime');
+  $('.divider').addClass('lime darken-2');
+  $('#side-nav-propic').attr('src', 'images/ms-icon-144x144.png');
   $('#navbar_id, #foot').addClass('lime');
   console.log("Online");
 } else {
@@ -60,6 +63,9 @@ if (navigator.onLine) {
   $('head').append('<meta name="msapplication-TileColor" content="#607d8b">');
   $("#logo_img").attr("src", "images/greylogo.png");
   $('body').addClass('grey lighten-4');
+  $('#mobile-demo').addClass('blue-grey');
+  $('.divider').addClass('blue-grey darken-2');
+  $('#side-nav-propic').attr('src', 'images/greylogo.png');
   $('#mail_form').hide();
   $('#chip_message').removeClass('hide');
   $('#navbar_id, #foot').addClass('blue-grey');
