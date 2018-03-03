@@ -78,3 +78,15 @@ body>div.fixed-action-btn.toolbar.active>ul>li>i {
 .warn-gradient {
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
+
+.card .card-title{
+  font-size: 20px;
+}
+
+i.small{
+  font-size: 18px;
+}
+
+.cool-gradient{
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
