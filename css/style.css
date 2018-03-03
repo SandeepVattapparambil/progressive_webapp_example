@@ -30,7 +30,8 @@ body>div.fixed-action-btn.toolbar.active>ul>li>i {
   font-size: 20px;
 }
 
-#form_button, #form_clear_button {
+#form_button,
+#form_clear_button {
   margin: 5px;
 }
 
@@ -70,6 +71,13 @@ body>div.fixed-action-btn.toolbar.active>ul>li>i {
   margin-bottom: -15px;
 }
 
-.card{
+.card {
   border-radius: 10px;
+}
+
+.lime-gradient {
+  background: #56ab2f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
