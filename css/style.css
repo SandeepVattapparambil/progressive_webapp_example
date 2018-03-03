@@ -69,3 +69,7 @@ body>div.fixed-action-btn.toolbar.active>ul>li>i {
 .margined {
   margin-bottom: -15px;
 }
+
+.card{
+  border-radius: 10px;
+}
